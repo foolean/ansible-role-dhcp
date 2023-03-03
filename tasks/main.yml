@@ -13,7 +13,10 @@
       become: true
       ansible.builtin.package:
         name:
+          # RedHat packages
           - 'dhcp-server'
+          # Debian packages
+          - 'isc-dhcp-server'
         state: absent
 
   # Tags to be applied to this role (block)
